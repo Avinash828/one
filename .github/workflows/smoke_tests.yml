@@ -27,9 +27,6 @@ jobs:
      runs-on: self-hosted
      steps:
       - uses: actions/checkout@v2
-      - name: Set up QEMU
-        id: qemu
-        uses: docker/setup-qemu-action@v1
       - name: Install and Run tests
         run: |
                 apt-get update -y
