@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   smoke-tests:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Set up Ruby
@@ -24,7 +24,7 @@ jobs:
       - name: Run Smoke Tests
         run: $GITHUB_WORKSPACE/share/smoke_tests/smoke_tests.sh
   test_arm64: 
-     runs-on: ubuntu-latest
+     runs-on: self-hosted
      steps:
       - uses: actions/checkout@v2
       - name: Set up QEMU
