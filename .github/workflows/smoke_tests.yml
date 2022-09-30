@@ -29,6 +29,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install and Run tests
         run: |
+           sudo apt-get update -y
            sudo apt install -y build-essential
            curl -sL https://deb.nodesource.com/setup_14.x | bash -
            sudo apt install -y nodejs
