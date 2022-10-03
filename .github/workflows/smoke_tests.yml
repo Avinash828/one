@@ -29,11 +29,11 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install and Run tests
         run: |
-           sudo apt-get update -y
-           sudo apt install -y build-essential
+           apt-get update -y
+           apt install -y build-essential
            curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
-           sudo apt install -y nodejs
-           sudo apt-get -y install ruby-full
+           apt install -y nodejs
+           apt-get -y install ruby-full
            gem install rubocop
            npm install eslint-plugin-import@latest --save-dev
            npm i -D eslint @typescript-eslint/eslint-plugin
