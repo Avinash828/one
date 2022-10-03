@@ -28,9 +28,9 @@ jobs:
      steps:
       - uses: actions/checkout@v2
       - name: Install and Run tests
+        run: apt install -y build-essential
+      - name: install node
         run: |
-           apt-get update -y
-           apt install -y build-essential
            curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
            apt install -y nodejs
            apt-get -y install ruby-full
