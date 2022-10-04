@@ -11,8 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Install and Run tests
-        run: sudo apt install -y build-essential
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -29,8 +27,9 @@ jobs:
      runs-on: self-hosted
      steps:
       - uses: actions/checkout@v2
-      - name: install node
+      - name: Run smoke_test_arm64
         run: |
+           sudo apt-get update -y
            sudo apt install -y build-essential
            sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
            sudo apt install -y nodejs
