@@ -10,7 +10,6 @@ jobs:
   smoke-tests:
     runs-on: ubuntu-latest
     
-
     steps:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
