@@ -35,7 +35,7 @@ jobs:
            sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
            sudo apt install -y nodejs
            sudo apt-get -y install ruby-full
-           gem install rubocop
+           sudo gem install rubocop
            npm install eslint-plugin-import@latest --save-dev
            npm i -D eslint @typescript-eslint/eslint-plugin
            ./share/smoke_tests/smoke_tests.sh
